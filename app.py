@@ -29,13 +29,13 @@ def upload_file():
         if string[-1] != '$':
             string += '$'
         encoder = RunLengthEncoder(string)
-        return send_file('q2_encoder_output.bin', as_attachment=True)
+        return send_file('encoder_output.bin', as_attachment=True)
 
     if file and action == 'decode':
         filename = 'uploaded.bin'
         file.save(filename)
         decoder = RunLengthDecoder(filename)
-        return send_file('q2_decoder_output.txt', as_attachment=True)
+        return send_file('decoder_output.txt', as_attachment=True)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
