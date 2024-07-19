@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+.upload-container {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  display: inline-block;
+}
+
+input[type="file"] {
+  display: block;
+  margin: 20px auto;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
